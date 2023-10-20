@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "pitchfork"
+version = "0.0.1"
+description = ""
+authors = ["Will Holley <will@willholley.com>"]
+license = "GPLv3"
+readme = "README.md"
+
+[tool.poe.tasks]
+scrape = "python scripts/scrape.py"
+analyze = "python scripts/analyze.py"
+
+[tool.poetry.dependencies]
+python = "3.11.6"
+requests = "^2.31.0"
+pandas = "^2.1.1"
+
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.4"
+poethepoet = "^0.24.1"
+ipdb = "^0.13.13"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
